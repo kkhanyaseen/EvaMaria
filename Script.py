@@ -1,14 +1,15 @@
 class script(object):
-    START_TXT = """𝗛𝗲𝗹𝗹𝗼 {},
-𝗠𝘆 𝗻𝗮𝗺𝗲 𝗶𝘀 <a href=https://t.me/{}>{}</a>, 𝗜 𝗖𝗔𝗡 𝗣𝗥𝗢𝗩𝗜𝗗𝗘 𝗠𝗢𝗩𝗜𝗘𝗦 😍"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/kkhanyaseen>Yaseen</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹"""
+    START_TXT = """Hello {},
+Mera naam <a href=https://t.me/{}>{}</a> Hai, I can provide movies 😍
+<a href=https://t.me/moviesrequestgroup11>Join This To use me</a>"""
+    HELP_TXT = """Hey {}
+Here is the help for my commands."""
+    ABOUT_TXT = """ My Name: {}
+Creator: <a href=https://t.me/kkhanyaseen>Yaseen</a>
+Library: Pyrogram 
+Language : Python"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Chala jaa Yahan se"""
+- 👊👊👊👊👊"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
@@ -84,11 +85,11 @@ This module only works for my admins
 • /unban  - <code>to unban a user.</code>
 • /channel - <code>to get list of total connected channels</code>
 • /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
-★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
-★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱"""
+    STATUS_TXT = """TOTAL FILES: <code>{}</code>
+TOTAL USER: <code>{}</code>
+TOTAL CHATS: <code>{}</code>
+USED STORAGE: <code>{}</code> 𝙼𝚒𝙱
+FREE STORAGE: <code>{}</code> 𝙼𝚒𝙱"""
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
