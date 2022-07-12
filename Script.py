@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """Hello {},
-My name is <a href=https://t.me/{}>{}</a> Hai, 
+My name is <a href=https://t.me/{}>{}</a>, 
 <b>I can provide movies </b>😍
 <a href=https://t.me/moviesrequestgroup11>Join This To use me</a>"""
     HELP_TXT = """Hey {}
