@@ -708,7 +708,8 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"Search Result of {search}
+    <a href=tg://openmessage?user_id={message.chat.id}>{message.chat.first_name}</a>\n""
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
