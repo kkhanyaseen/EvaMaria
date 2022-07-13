@@ -43,8 +43,7 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
             InlineKeyboardButton('🧔Owner', url='https://t.me/kkhanyaseen')
-        ], [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('ℹ️ Help', callback_data='help')
            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -84,9 +83,9 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons =[[
-            InlineKeyboardButton('Owner', url='https://t.me/kkhanyaseen')
+            InlineKeyboardButton('🧔Owner', url='https://t.me/kkhanyaseen)
             InlineKeyboardButton('ℹ️ Help', callback_data='help')
-           ]]
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
