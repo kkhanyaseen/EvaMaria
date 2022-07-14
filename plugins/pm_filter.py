@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('😷 𝗦𝗘𝗡𝗧 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗣𝗘𝗥𝗦𝗢𝗡𝗔𝗟 𝗖𝗛𝗔𝗧!!', show_alert=True)
+                await query.answer('Check PM, I have sent files in pm!!', show_alert=True)
         except UserIsBlocked:
             await query.answer('🤒 𝗨𝗡𝗕𝗟𝗢𝗖𝗞 𝗠𝗘 𝗜𝗗𝗜𝗢𝗧 🥲', show_alert=True)
         except PeerIdInvalid:
@@ -403,10 +403,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('🤴🏻 𝗢𝗪𝗡𝗘𝗥', url='https://t.me/Hithaishi_Desai')
-            InlineKeyboardButton('👨🏻‍💻 𝗛𝗘𝗟𝗣', callback_data='help'),
-        ]]
+        buttons =[[
+            InlineKeyboardButton('🧔Owner', url='https://t.me/kkhanyaseen')
+            ], [
+            InlineKeyboardButton('ℹ️ Help', callback_data='help')
+           ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
