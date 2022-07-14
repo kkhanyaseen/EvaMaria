@@ -681,14 +681,11 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"Search Result of {search}"
     if imdb and imdb.get('poster'):
         try:
-           a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+            await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-           await asyncio.sleep(300)
-           await message.delete()
-           await a.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
@@ -740,7 +737,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply_sticker("CAACAgUAAxkBAAEE70VioArdD5I6Grlsm4HUPKz4hZxYrAACEwUAAl6BAVWSdOPhVKk_6SQE")
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -752,10 +749,8 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    s = await msg.reply_sticker("CAACAgUAAxkBAAEE70VioArdD5I6Grlsm4HUPKz4hZxYrAACEwUAAl6BAVWSdOPhVKk_6SQE",
+    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(10)
-    await s.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
