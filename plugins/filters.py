@@ -187,7 +187,7 @@ async def deletefilter(client, message):
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
-        grpid  = await active_connection(str(userid))
+        grpid = await active_connection(str(userid))
         if grpid is not None:
             grp_id = grpid
             try:
