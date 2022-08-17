@@ -46,8 +46,8 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         logging.info("Bot stopped. Bye.")
-        
-        async def iter_messages(
+    
+    async def iter_messages(
         self,
         chat_id: Union[int, str],
         limit: int,
@@ -85,6 +85,7 @@ class Bot(Client):
             for message in messages:
                 yield message
                 current += 1
+
 
 app = Bot()
 app.run()
