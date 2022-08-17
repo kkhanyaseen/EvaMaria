@@ -122,8 +122,8 @@ async def advantage_spoll_choker(bot, query):
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer("🔍 Search ur own files...", show_alert=True)
     if movie_ == "close_spellcheck":
-        return await query.message.delete()
-    movies = SPELL_CHECK.get(query.message.reply_to_message.id)
+        return await query.message.delete() 
+    movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
         return await query.answer("You are clicking on an old button which is expired.", show_alert=True)
     movie = movies[(int(movie_))]
