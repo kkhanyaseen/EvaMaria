@@ -115,15 +115,14 @@ async def next_page(bot, query):
         pass
     await query.answer()
 
-
 @Client.on_callback_query(filters.regex(r"^spolling"))
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("🔍 Search ur own files...", show_alert=True)
+        return await query.answer("okDa", show_alert=True)
     if movie_ == "close_spellcheck":
-        return await query.message.delete() 
-    movies = SPELL_CHECK.get(query.message.reply_to_message.message.id)
+        return await query.message.delete()
+    movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
         return await query.answer("You are clicking on an old button which is expired.", show_alert=True)
     movie = movies[(int(movie_))]
@@ -135,10 +134,9 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In my DataBase, Message <a href=tg://openmessage?user_id=819697641>Yaseen</a> he will add and then try again')
-            await asyncio.sleep(30)
+            k = await query.message.edit('This Movie Not Found In DataBase')
+            await asyncio.sleep(10)
             await k.delete()
-
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
