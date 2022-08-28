@@ -351,13 +351,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer 
-                     buttons =[
+                         [
                          InlineKeyboardButton({filename},(url='https://api.shareus.in/directLink?token=U3p0ljMHKIZ0s7q7WbLewGtoW7B2&link=https://t.me/{temp.U_NAME}?start={ident}_{file_id}')
                          ]
                 return
             elif settings['botpm']:
                 await query.answer
-                     buttons =[
+                         [
                          InlineKeyboardButton({filename},(url='https://api.shareus.in/directLink?token=U3p0ljMHKIZ0s7q7WbLewGtoW7B2&link=https://t.me/{temp.U_NAME}?start={ident}_{file_id}')
                          ]
                 return
@@ -373,12 +373,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer('🤒 unblock me idiot 🥲', show_alert=True)
         except PeerIdInvalid:
             await query.answer
-                buttons =[
+                         [
                          InlineKeyboardButton({filename},(url='https://api.shareus.in/directLink?token=U3p0ljMHKIZ0s7q7WbLewGtoW7B2&link=https://t.me/{temp.U_NAME}?start={ident}_{file_id}')
                          ]
         except Exception as e:
             await query.answer
-                 buttons =[
+                         [
                          InlineKeyboardButton({filename},(url='https://api.shareus.in/directLink?token=U3p0ljMHKIZ0s7q7WbLewGtoW7B2&link=https://t.me/{temp.U_NAME}?start={ident}_{file_id}')
                          ]
     elif query.data.startswith("checksub"):
